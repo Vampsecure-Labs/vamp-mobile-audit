@@ -1,16 +1,11 @@
 # © VampSecure Studios — VampSecure Labs Security Research Division
 """Tests unitarios para vamp-mobile-audit."""
 import io
-import json
 import plistlib
-import struct
 import zipfile
-from typing import Dict, List, Tuple
-
-import pytest
+from typing import List
 
 from vamp_mobile_audit import (
-    AXMLParser,
     Finding,
     analyze_apk,
     analyze_ipa,
@@ -34,7 +29,6 @@ from vamp_mobile_audit import (
     main,
     render_html,
 )
-
 
 # ─── Helpers ─────────────────────────────────────────────────────────────────
 

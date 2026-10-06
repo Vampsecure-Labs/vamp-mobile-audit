@@ -30,7 +30,7 @@ import zipfile
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Dict, Iterator, List, Optional, Tuple
+from typing import Dict, List, Optional, Tuple
 
 # ─── Catálogo de checks ──────────────────────────────────────────────────────
 
@@ -248,7 +248,8 @@ class AXMLParser:
 def _read_uleb128(data: bytes, pos: int) -> Tuple[int, int]:
     result = shift = 0
     while True:
-        b = data[pos]; pos += 1
+        b = data[pos]
+        pos += 1
         result |= (b & 0x7F) << shift
         if not (b & 0x80):
             return result, pos
@@ -825,7 +826,7 @@ def main(argv: Optional[List[str]] = None) -> int:
     elif platform == "ios":
         findings = analyze_ipa(args.target)
     else:
-        print(f"[ERROR] Formato no reconocido (se esperaba .apk/.aab/.ipa)", file=sys.stderr)
+        print("[ERROR] Formato no reconocido (se esperaba .apk/.aab/.ipa)", file=sys.stderr)
         return 2
 
     if args.severity:
