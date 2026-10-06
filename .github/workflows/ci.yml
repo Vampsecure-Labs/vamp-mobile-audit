@@ -19,9 +19,9 @@ jobs:
 
       - name: Instalar dependencias
         run: |
-          pip install --upgrade pip
+          pip install --upgrade pip setuptools wheel
           pip install pytest ruff
-          pip install -e . --no-deps
+          pip install . --no-deps
 
       - name: Tests unitarios
         run: pytest tests/test_unit.py -v --tb=short
