@@ -35,9 +35,8 @@ Homepage = "https://vampsecurestudios.com"
 Repository = "https://github.com/Vampsecure-Labs/vamp-mobile-audit"
 Issues = "https://github.com/Vampsecure-Labs/vamp-mobile-audit/issues"
 
-[tool.setuptools.packages.find]
-where = ["."]
-include = ["vamp_mobile_audit*"]
+[tool.setuptools]
+py-modules = ["vamp_mobile_audit"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
