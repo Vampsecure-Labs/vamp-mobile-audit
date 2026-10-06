@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vamp-mobile-audit"
+version = "1.0.0"
+description = "OWASP MASVS 2.0 static auditor for APK and IPA files"
+readme = "README.md"
+license = { text = "AGPL-3.0-only" }
+authors = [{ name = "VampSecure Studios", email = "belky@protonmail.ch" }]
+requires-python = ">=3.9"
+keywords = ["security", "mobile", "android", "ios", "masvs", "apk", "ipa", "audit"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Information Technology",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: GNU Affero General Public License v3",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Security",
+    "Topic :: Software Development :: Quality Assurance",
+]
+dependencies = []
+
+[project.scripts]
+vamp-mobile-audit = "vamp_mobile_audit:main_entry"
+
+[project.urls]
+Homepage = "https://vampsecurestudios.com"
+Repository = "https://github.com/Vampsecure-Labs/vamp-mobile-audit"
+Issues = "https://github.com/Vampsecure-Labs/vamp-mobile-audit/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["vamp_mobile_audit*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-v --tb=short"
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I"]
+ignore = ["E501"]

@@ -1,0 +1,6 @@
+# vamp-mobile-audit — no runtime dependencies beyond the Python standard library
+# (zipfile, struct, re, plistlib, hashlib, argparse, json, dataclasses are all stdlib)
+
+# Dev/test only
+pytest>=7.0
+ruff>=0.1.0
