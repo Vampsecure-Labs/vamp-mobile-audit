@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "vamp-mobile-audit"
-version = "1.0.0"
+version = "1.2"
 description = "OWASP MASVS 2.0 static auditor for APK and IPA files"
 readme = "README.md"
 license = { text = "AGPL-3.0-only" }

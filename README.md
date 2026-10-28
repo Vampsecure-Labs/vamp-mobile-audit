@@ -91,7 +91,7 @@ vamp-mobile-audit app.apk --quiet
 ### Sample Output
 
 ```
-  vamp-mobile-audit v1.0.0 · auditing app.apk (28.4 MB)
+  vamp-mobile-audit v1.2 · auditing app.apk (28.4 MB)
   ──────────────────────────────────────────────────────────────
   [+] APK unpacked · AndroidManifest.xml parsed · DEX strings extracted
 
